@@ -1,0 +1,33 @@
+{
+  "title": "learn-deployment",
+  "description": "Learn Deployment With Ansible",
+  "path": "exercises",
+  "exercises": [
+    "ssh-keys",
+    "authorized-keys",
+    "known-hosts",
+    "key-permissions",
+    "ssh-agent",
+    "permissions-elevation",
+    "your-server",
+    "ansible",
+    "playbooks",
+    "inventory-files",
+    "tasks",
+    "loops",
+    "services",
+    "templates",
+    "variables",
+    "conditionals",
+    "registering-variables",
+    "copying-files",
+    "services",
+    "nginx"
+  ],
+  "meta": {
+    "colors": {
+      "bg": "cyan",
+      "fg": "white"
+    }
+  }
+}

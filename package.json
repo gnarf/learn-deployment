@@ -1,0 +1,18 @@
+{
+  "name": "learn-deployment",
+  "bin": {
+    "deploy": "bin/deploy.js"
+  },
+  "scripts": {
+    "start": "node bin/deploy"
+  },
+  "dependencies": {
+    "adventure": "^2.10.0",
+    "marked": "^0.3.3",
+    "marked-terminal": "^1.5.0",
+    "ncp": "^2.0.0",
+    "ramda": "^0.14.0",
+    "terminal-menu": "^2.1.1",
+    "wrench": "^1.5.8"
+  }
+}
