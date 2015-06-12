@@ -1,0 +1,2 @@
+- name: show the distribution
+  debug: var=ansible_distribution

@@ -11,7 +11,7 @@
     port: 8000
   tasks:
     - name: install apt packages
-      apt: name={{ item }} state=latest update_cache=yes
+      apt: name={{item}} state=latest update_cache=yes
       with_items: apt_packages
 
     - name: make sure code is on the box
@@ -28,7 +28,7 @@
       template: src=../learn-deployment.conf dest=/etc/nginx/conf.d
 
     - name: restart services
-      service: name={{ item }} state=restarted
+      service: name={{item}} state=restarted
       with_items:
         - nginx
         - app

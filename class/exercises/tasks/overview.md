@@ -17,8 +17,8 @@ git using the apt package manager.
 
 ```
 tasks
-  - name: show the hostname
-    debug: var=ansible_hostname
+  - name: show the distribution
+    debug: var=ansible_distribution
 
   - apt: name=git state=latest
 ```

@@ -2,8 +2,8 @@
   hosts: all
   sudo: true
   tasks:
-    - name: show the hostname
-      debug: var=ansible_hostname
+    - name: show the distribution
+      debug: var=ansible_distribution
 
     - name: install git
       apt: name=git state=latest update_cache=yes

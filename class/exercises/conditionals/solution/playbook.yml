@@ -2,6 +2,7 @@
   hosts: all
   sudo: true
   vars:
+    conditional: true
     apt_packages:
       - git
       - nodejs
@@ -10,3 +11,7 @@
     - name: install apt packages
       apt: name={{item}} state=latest update_cache=yes
       with_items: apt_packages
+      when: conditional == true
+
+    - include: other.yml
+      when: conditional == false

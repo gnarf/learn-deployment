@@ -8,7 +8,7 @@
       - nginx
   tasks:
     - name: install apt packages
-      apt: name={{ item }} state=latest update_cache=yes
+      apt: name={{item}} state=latest update_cache=yes
       with_items: apt_packages
 
     - name: make sure code is on the box
@@ -18,7 +18,7 @@
       copy: src=../app.conf dest=/etc/init
 
     - name: start services
-      service: name={{ item }} state=restarted
+      service: name={{item}} state=restarted
       with_items:
         - nginx
         - app
