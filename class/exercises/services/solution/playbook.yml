@@ -1,0 +1,24 @@
+-
+  hosts: all
+  sudo: true
+  vars:
+    apt_packages:
+      - git
+      - node
+      - nginx
+  tasks:
+    - name: install apt packages
+      apt: name={{ item }} state=latest update_cache=yes
+      with_items: apt_packages
+
+    - name: make sure code is on the box
+      copy: src=../app.js dest=/mnt
+
+    - name: install service
+      copy: src=../app.conf dest=/etc/init
+
+    - name: start services
+      service: name={{ item }} state=started
+      with_items:
+        - nginx
+        - app
