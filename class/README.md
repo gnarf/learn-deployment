@@ -143,6 +143,8 @@ checking of the same variable across multiple tasks).
 
 ## services
 
+TODO: systemd vs upstart?
+
 Students now understand how to install nginx, but it isn't running because we
 can't visit our machine in a browser. How do we get it started? By using the
 service included with the package.
