@@ -6,8 +6,9 @@
       - git
       - nodejs
       - nginx
-    node_path: /usr/bin/nodejs
     app_path: /mnt/app
+    fqdn: learn-deployment.bocoup.com
+    port: 8000
   tasks:
     - name: install apt packages
       apt: name={{ item }} state=latest update_cache=yes
@@ -16,10 +17,17 @@
     - name: make sure code is on the box
       copy: src=../app.js dest=/mnt
 
-    - name: install service
+    - name: find node path
+      command: which nodejs
+      register: node_path
+
+    - name: ensure upstart script for app is in place
       template: src=../app.conf dest=/etc/init
 
-    - name: start services
+    - name: ensure nginx is configured for app
+      template: src=../learn-deployment.conf dest=/etc/nginx/conf.d
+
+    - name: restart services
       service: name={{ item }} state=restarted
       with_items:
         - nginx

@@ -4,7 +4,7 @@
   vars:
     apt_packages:
       - git
-      - node
+      - nodejs
       - nginx
     app_path: /mnt/app
   tasks:
@@ -16,14 +16,14 @@
       copy: src=../app.js dest=/mnt
 
     - name: find node path
-      command: which node
+      command: which nodejs
       register: node_path
 
-    - name: install service
+    - name: ensure upstart script for app is in place
       template: src=../app.conf dest=/etc/init
 
     - name: start services
-      service: name={{ item }} state=started
+      service: name={{ item }} state=restarted
       with_items:
         - nginx
         - app

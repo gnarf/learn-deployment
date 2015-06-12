@@ -4,7 +4,7 @@
   vars:
     apt_packages:
       - git
-      - node
+      - nodejs
       - nginx
   tasks:
     - name: install apt packages
@@ -18,7 +18,7 @@
       copy: src=../app.conf dest=/etc/init
 
     - name: start services
-      service: name={{ item }} state=started
+      service: name={{ item }} state=restarted
       with_items:
         - nginx
         - app

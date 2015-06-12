@@ -4,7 +4,7 @@
   vars:
     apt_packages:
       - git
-      - node
+      - nodejs
       - nginx
   tasks:
     - name: install apt packages

@@ -3,10 +3,15 @@ const host = process.env.HOST || '0.0.0.0';
 
 const http = require('http');
 
-var count = 0;
+const count = {};
 function handler (req, res) {
-  count++;
-  console.log(req.method+' '+req.url);
+  const url = req.url;
+  if (!count[url]) {
+    count[url] = 1;
+  } else {
+    count[url]++;
+  }
+  console.log(req.method+' '+url);
   res.end([
     '<!doctype html>',
     '<html>',
@@ -14,7 +19,8 @@ function handler (req, res) {
     '    <title>Learn Deployment</title>',
     '  </head>',
     '  <body>',
-    '    <h1>You have been here '+count+' times!</h1>',
+    '    <h1>Welcome to '+url+'</h1>',
+    '    <p>You have been here '+count[url]+' times.</p>',
     '  </body>',
     '</html>'
   ].join('\n'));
