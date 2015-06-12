@@ -2,7 +2,7 @@
 
 At least one day prior to the class, students must provide their public key and
 the username of their machine. The instructor should prepare a playbook to grant
-everyone access to the machine, but it should **NOT** be run before the first
+everyone access to a server, but it should **NOT** be run before the first
 exercise begins.
 
 The class opens by having everyone `npm install -g tkellen/learn-deployment`.
