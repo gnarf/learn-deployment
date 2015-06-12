@@ -1,0 +1,12 @@
+-
+  hosts: all
+  sudo: true
+  vars:
+    apt_packages:
+      - git
+      - node
+      - nginx
+  tasks:
+    - name: install apt packages
+      apt: name={{ item }} state=latest update_cache=yes
+      with_items: apt_packages
