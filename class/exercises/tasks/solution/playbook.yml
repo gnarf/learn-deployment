@@ -1,8 +1,15 @@
 -
   hosts: all
+  sudo: true
   tasks:
     - name: show the hostname
       debug: var=ansible_hostname
 
     - name: install git
-      apt: name=git state=latest
+      apt: name=git state=latest update_cache=yes
+
+    - name: install node
+      apt: name=node state=latest update_cache=yes
+
+    - name: install nginx
+      apt: name=nginx state=latest update_cache=yes
