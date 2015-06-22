@@ -52,7 +52,9 @@ you!
 ## How SSH Uses Your Keys
 
 In SSHv1, the basic form of public key encryption is used. During connection,
-the server encrypts a message for the user and it's expected that the user's machine is capable of decrypting it and responding with the correct plain text. This is known as a cryptographic challenge.
+the server encrypts a message for the user and it's expected that the user's
+machine is capable of decrypting it and responding with the correct plain text.
+This is known as a cryptographic challenge.
 
 In SSHv2, the user sends a cryptographic signature that the server validates
 prior to granting access.
@@ -65,6 +67,7 @@ which covers the `authorized_keys` file.
 
 ## Generating SSH Keys
 
-The tool most commonly used to generate keys is OpenSSL. Github's writeup on key generation is thorough and covers all major platforms:
+The tool most commonly used to generate keys is OpenSSL. Github's writeup on key
+generation is thorough and covers all major platforms:
 
 https://help.github.com/articles/generating-ssh-keys/
