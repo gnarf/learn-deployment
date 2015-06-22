@@ -1,0 +1,50 @@
+-
+  hosts: all
+  sudo: yes
+  handlers:
+    - name: restart sshd
+      service: name=sshd state=restarted
+  tasks:
+    - name: ensure users are synced
+      user:
+        name: "{{item.name}}"
+        force: yes
+        remove: yes
+        password: "{{ item.shadow_pass | default(omit) }}"
+        state: "{{ item.state | default(omit) }}"
+        shell: "{{ item.shell | default('/bin/bash') }}"
+        groups: "{{ item.groups | default('sudo') }}"
+      with_items: users
+
+    - name: ensure user public keys are synced
+      authorized_key:
+        user: "{{item.name}}"
+        key: "{{ item.public_keys | join('\n') }}"
+        state: present
+        exclusive: yes
+      with_items: users
+      when: item.public_keys is defined and item.public_keys | length > 0
+
+    - name: disallow password authentication
+      lineinfile:
+        dest: /etc/ssh/sshd_config
+        state: present
+        regexp: "^PasswordAuthentication"
+        line: "PasswordAuthentication no"
+      notify: restart sshd
+
+    - name: disallow challenge response authentication
+      lineinfile:
+        dest: /etc/ssh/sshd_config
+        state: present
+        regexp: "^ChallengeResponseAuthentication"
+        line: "ChallengeResponseAuthentication no"
+      notify: restart sshd
+
+    - name: allow passwordless sudo for users in group sudo
+      lineinfile:
+        dest: /etc/sudoers
+        state: present
+        regexp: "^%sudo"
+        line: "%sudo	ALL=(ALL:ALL) NOPASSWD:ALL"
+        validate: "visudo -cf %s"
