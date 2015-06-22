@@ -15,7 +15,7 @@ function Learn (configPath) {
 
 Learn.prototype.menu = function () {
   const config = this.config;
-  const width = 80
+  const width = 80;
   const exercises = config.exercises;
   const bar = Array(width).join('─');
   const colors = config.meta && config.meta.colors || {};
@@ -39,8 +39,8 @@ Learn.prototype.menu = function () {
     process.stdin.end();
   });
   menu.reset();
-  menu.write(config.description.toUpperCase()+'\n');
-  menu.write(bar+'\n');
+  menu.write(config.description.toUpperCase() + '\n');
+  menu.write(bar + '\n');
   R.forEach(
     R.compose(
       R.partialRight(R.bind(menu.add, menu), chooseFn),
@@ -48,21 +48,20 @@ Learn.prototype.menu = function () {
     ),
     exercises
   );
-  menu.write(bar+'\n');
+  menu.write(bar + '\n');
   menu.add('HELP');
   menu.add('EXIT');
 
   process.stdin.setRawMode(true);
   process.stdin.pipe(menu.createStream()).pipe(process.stdout);
-}
+};
 
 Learn.prototype.help = function () {
   console.log('Help!');
-}
+};
 
 Learn.prototype.exit = function () {
 
-}
-
+};
 
 module.exports = Learn;

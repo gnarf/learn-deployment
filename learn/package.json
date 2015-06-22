@@ -1,0 +1,20 @@
+{
+  "name": "learn",
+  "description": "A tool for making learning exercises",
+  "scripts": {
+    "test": "jshint lib index.js && jscs lib index.js && mocha -t 5000 -b -R spec test/index"
+  },
+  "dependencies": {
+    "marked": "^0.3.3",
+    "marked-terminal": "^1.5.0",
+    "ramda": "^0.14.0",
+    "terminal-menu": "^2.1.1",
+    "wrench": "^1.5.8"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "jscs": "^1.13.1",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5"
+  }
+}
