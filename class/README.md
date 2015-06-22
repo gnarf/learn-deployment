@@ -1,8 +1,20 @@
 # Instructor Notes
 
-At least one day prior to the class, students must provide their public key and
-the username of their machine. The instructor should prepare a playbook to grant
-everyone access to a server, but it should **NOT** be run before the first
+At least one day prior to the class, students must provide the public half of
+their public/private keypair, and the username of their machine. The instructor
+should require that the user's keypair be protected by a passphrase:
+
+If students do not have a public/private keypair, they can follow this guide:
+https://help.github.com/articles/generating-ssh-keys/
+
+If students *do* have a public/private keypair but it isn't protected by a
+passphrase they can add one with the following command:
+```
+ssh-keygen -p -f ~/.ssh/id_rsa
+```
+
+The instructor should prepare the ansible configuration in this folder to grant
+all students access to a server. This should **NOT** be run before the first
 exercise begins.
 
 The class opens by having everyone `npm install -g tkellen/learn-deployment`.
@@ -22,7 +34,7 @@ explain the new concept. After fielding any questions, students will then run
 The exercise folder contains a private key which can be used to connect to
 an EC2 instance accessible at `learn-deployment.bocoup.com` with the username
 `ubuntu`. Notably, the key has the wrong permissions. Students will first have
-to correct this before they can connect.
+to correct this before they can connect (chmod 400, owner read only).
 
 The instructor will explain the usage of the command line flag `-i`, and how
 to specify a username by prefixing the desired host with `user@`, or using the
@@ -62,7 +74,8 @@ done.
 
 ## ssh-agent
 
-To be defined.
+Students now understand the basic usage of private keys. Now, we check to see if
+students used a passphrase
 
 ## your-server
 
