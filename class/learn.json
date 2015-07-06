@@ -3,9 +3,10 @@
   "description": "Learn Deployment With Ansible",
   "path": "exercises",
   "exercises": [
-    "ssh-keys",
+    "ssh-basics",
     "authorized-keys",
     "known-hosts",
+    "ssh-key-passphrases",
     "ssh-agent",
     "your-server",
     "permissions-elevation",

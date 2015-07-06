@@ -29,7 +29,7 @@ The instructor will begin each section by using the overview file as a guide to
 explain the new concept. After fielding any questions, students will then run
 `learn-deployment` on their own machine to begin development.
 
-## ssh-keys
+## ssh-basics
 
 The exercise folder contains a private key which can be used to connect to
 an EC2 instance accessible at `learn-deployment.bocoup.com` with the username
@@ -71,6 +71,12 @@ server. This will trigger a warning.
 The instructor will then explain how to fix this problem using ssh-keygen, with
 an emphasis that the veracity of the server should be verified before this is
 done.
+
+## ssh-key-passphrases
+
+Students will now learn about passphrases, how to add them to their keys if
+they don't have them, and how they are an instance of two factor authentication.
+This will lead into dealing with ssh-agent.
 
 ## ssh-agent
 
