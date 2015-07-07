@@ -7,12 +7,6 @@ should require that the user's keypair be protected by a passphrase:
 If students do not have a public/private keypair, they can follow this guide:
 https://help.github.com/articles/generating-ssh-keys/
 
-If students *do* have a public/private keypair but it isn't protected by a
-passphrase they can add one with the following command:
-```
-ssh-keygen -p -f ~/.ssh/id_rsa
-```
-
 The instructor should prepare the ansible configuration in this folder to grant
 all students access to a server. This should **NOT** be run before the first
 exercise begins.
@@ -75,13 +69,19 @@ done.
 ## ssh-key-passphrases
 
 Students will now learn about passphrases, how to add them to their keys if
-they don't have them, and how they are an instance of two factor authentication.
+they don't have them, and how they are a type of two factor authentication.
 This will lead into dealing with ssh-agent.
 
 ## ssh-agent
 
-Students now understand the basic usage of private keys. Now, we check to see if
-students used a passphrase
+Students now understand the basic usage of private keys. We'll now make managing
+them easier to deal with by adding to/listing the keys in our agent.
+
+We can check if ssh-agent is running by inspecting the environment variable
+$SSH_AUTH_SOCK, or using `ssh -T git@github.com` for accounts with a public
+key associated with a user (the flag `-T` prevents ssh from trying to create
+an interactive shell, which github will not provide--it has nothing to do with
+agent forwarding).
 
 ## your-server
 

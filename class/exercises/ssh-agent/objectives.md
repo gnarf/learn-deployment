@@ -1,6 +1,7 @@
 At the end of this exercise students should know...
 
-  - The importance of setting a password on your SSH key
-  - How to overcome the inconvenience of having to constantly type your SSH key password
-   - How to add keys to SSH agent
-
+- What ssh-agent is.
+- How to add keys to it.
+- How to list keys in it.
+- How to forward ssh-agent state in a ssh session with a command line flag.
+- How to configure ~/.ssh/config to enable forwarding for specific hosts
