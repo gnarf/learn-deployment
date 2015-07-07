@@ -27,7 +27,7 @@ ssh-add -L
 
 Not only does ssh-agent effectively allow a user to unlock their keys one time
 and continue using them without being prompted for their passphrase, this state
-can be *forwarded* to remote machines the user connects to using SSH's `-T`
+can be *forwarded* to remote machines the user connects to using SSH's `-A`
 option.
 
 This means users need not copy their private keys to machines they regularly SSH
