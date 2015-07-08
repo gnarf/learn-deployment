@@ -1,5 +1,3 @@
-At the end of this exercise students should know...
-
-  - How the machine requesting the SSH connection can be sure it's connecting to the correct remote host
-  - How to clear out invalid entries in the `known_hosts` file
-  - How to tell the difference between false positive `known_hosts` errors and legitimate ones
+- How is the identity of a machine you are SSHing to validated?
+- What are some common false positives for invalid known host warnings?
+- How do you clear invalid entries in `known_hosts`?

@@ -1,6 +1,5 @@
-At the end of this exercise students should know...
-
- - The basics of asymmetric cryptography
- - What a digital signature is used for when making SSH connections
- - Why asymmetric cryptography is used for SSH
- - How to generate a SSH key
+- What are the basics of asymmetric cryptography?
+- What is a digital signature is used for in SSH?
+- Why is asymmetric cryptography used for SSH?
+- How do you generate a SSH key?
+- What are the correct permissions for a private key?

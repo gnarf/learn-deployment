@@ -1,0 +1,3 @@
+- How do you register a variable from the output of a command?
+- How do you access that variable in subsequent tasks?
+- How do you debug the value of a variable?

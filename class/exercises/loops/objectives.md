@@ -1,0 +1,1 @@
+- How is the most basic form of looping made possible in Ansible?

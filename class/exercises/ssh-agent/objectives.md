@@ -1,7 +1,5 @@
-At the end of this exercise students should know...
-
-- What ssh-agent is.
-- How to add keys to it.
-- How to list keys in it.
-- How to forward ssh-agent state in a ssh session with a command line flag.
-- How to configure ~/.ssh/config to enable forwarding for specific hosts
+- What is ssh-agent used for?
+- How do you add keys to your agent?
+- How do you list keys in your agent?
+- How do you forward your agent with a command line flag?
+- How do you configure ~/.ssh/config to enable forwarding for a specific server?
