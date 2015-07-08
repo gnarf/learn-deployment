@@ -1,0 +1,5 @@
+- What is nginx?
+- Where does nginx store per-site configuration files?
+- What is an "upstream" in an nginx configuration?
+- How do you send traffic for web requests to a local service?
+- Why is it preferable to use nginx vs exposing express or rack etc directly?
