@@ -6,7 +6,7 @@ module which provides the relevant functionality.
 
 By default, Ansible runs tasks in a synchronous/blocking fashion. While it is
 possible to execute tasks asynchronously, that use-case will not be covered in
-this class.
+this workshop.
 
 Tasks are almost always defined by specifying a module name followed by a
 list of key=value pairs to configure how it should run.
