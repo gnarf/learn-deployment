@@ -36,10 +36,14 @@ line.
 
 Unfortunately for us, today's tools make it easier than ever to redeploy servers
 and DNS propagation can happen almost instantly; meaning there are lots of times
-when a server's keypair has changed legitimately. If SSH warns you that a
-server's identity cannot be verified, ask yourself the following questions:
+when a server's keypair has changed legitimately.
+
+If SSH warns you that a server's identity cannot be verified, ask yourself the
+following questions:
 
 - Is this a server I know has been recreated?
+- Is this a vagrant box? Running `vagrant destroy` and `vagrant up`
+  completely recreates the underlying virtual machine.
 - If connecting via fully qualified domain name does the `dig` command report
   the IP address I expect this server to have? If you don't have the `dig`
   command, you can try https://toolbox.googleapps.com/apps/dig/.
