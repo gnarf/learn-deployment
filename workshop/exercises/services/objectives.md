@@ -1,4 +1,3 @@
 - What is upstart for?
-- How do you configure a basic upstart script?
-- How do you control an upstart service with Ansible?
 - What is the default location for an upstart log file?
+- How do you control a service with Ansible?

@@ -1,0 +1,2 @@
+- How do you create a user on an Ubuntu machine?
+- How do you configure passwordless SSH access?

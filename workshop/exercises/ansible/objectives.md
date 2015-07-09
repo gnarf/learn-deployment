@@ -1,0 +1,3 @@
+- What is Ansible?
+- How is Ansible different than Chef/Puppet?
+- What is idempotency and why is it desirable for deployment?

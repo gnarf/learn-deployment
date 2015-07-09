@@ -1,0 +1,3 @@
+- What templating engine does Ansible use?
+- How do you interpolate a variable into a template?
+- How do you use filters?
