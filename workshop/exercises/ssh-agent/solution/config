@@ -1,2 +1,2 @@
-Host *.learn-deployment.com
+Host workshop.learn-deployment.com
   ForwardAgent yes
