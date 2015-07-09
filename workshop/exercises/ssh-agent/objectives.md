@@ -1,5 +1,6 @@
 - What is ssh-agent used for?
 - How do you add keys to your agent?
 - How do you list keys in your agent?
-- How do you forward your agent with a command line flag?
+- How do you forward your agent with a ssh command line flag?
+- How do you check to see if your agent is running or forwarding?
 - How do you configure ~/.ssh/config to enable forwarding for a specific server?

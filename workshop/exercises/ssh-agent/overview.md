@@ -22,7 +22,7 @@ these default keys: `~/.ssh/id_rsa`, `~/.ssh/id_dsa` and `~/.ssh/identity`.
 You can list all keys currently stored in your ssh-agent with the following:
 
 ```
-ssh-add -L
+ssh-add -l
 ```
 
 Not only does ssh-agent effectively allow a user to unlock their keys one time
@@ -40,3 +40,14 @@ Further, ssh-agent obviates the need to specify a private key when connecting to
 a remote machine (e.g. `ssh -i /path/to/key`), as it will automatically loop
 through all of your private keys until it's able to establish a successful
 connection (or it runs out of keys).
+
+## Exercise
+
+Confirm your agent is running by checking the value of $SSH_AUTH_SOCK. Then,
+confirm your agent is forwarding by ssh-ing to `workshop.learn-deployment.com`
+and checking $SSH_AUTH_SOCK again. Finally, confirm your agent is configured
+with your private key by trying to ssh to git@github.com both locally and
+remotely.
+
+As extra credit, edit `~/.ssh/config` to make agent forwarding the default
+behavior for `workshop.learn-deployment.com`.

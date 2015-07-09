@@ -24,6 +24,10 @@ The instructor will begin each section by using the overview file as a guide to
 explain the new concept. After fielding any questions, attendees will then run
 `learn-deployment` on their own machine to begin development.
 
+## asymmetric-cryptography
+
+The instructor will explain asymmetric cryptography.
+
 ## ssh-basics
 
 The exercise folder contains a private key which can be used to connect to
@@ -31,12 +35,8 @@ an EC2 instance accessible at `workshop.learn-deployment.com` with the
 username `ubuntu`. Notably, the key has the wrong permissions. Attendees must
 first correct this before they can connect (chmod 400, owner read only).
 
-The instructor will explain the usage of the command line flag `-i`, and how
-to specify a username by prefixing the desired host with `user@`, or using the
-command line flag `-l`.
-
-Once all attendees have successfully connected as the user `ubuntu`, everyone
-should log off and try to connect as themselves. This will fail.
+Once all attendees have successfully connected, everyone should log off and
+try to connect as themselves. This will fail.
 
 Then, the instructor will tell the attendees to wait a moment as they run a
 playbook to give everyone access. A few seconds later, everyone in the room has
@@ -90,6 +90,11 @@ The `-A` flag must be specified with SSH to enable this. We should also cover
 how to configure `~/.ssh/config` to enable this for specific domains/machines
 etc.
 
+## permissions-elevation
+
+Attendees will learn how to use sudo and su, the difference between them, and
+how to manage sudoers.
+
 ## your-server
 
 Attendees will each be given a `username.learn-deployment.com` domain that
@@ -102,11 +107,6 @@ users in the workshop.
 
 Finally, the existence of http://github.com/username.keys will be pointed out as
 a matter of convenience.
-
-## permissions-elevation
-
-Attendees will learn how to use sudo and su, the difference between them, and
-how to manage sudoers.
 
 ## ansible
 

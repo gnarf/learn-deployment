@@ -1,5 +1,3 @@
-- What are the basics of asymmetric cryptography?
-- What is a digital signature used for in SSH?
-- Why is asymmetric cryptography used for SSH?
-- How do you generate a SSH key?
+- How do you specify a private key when using SSH?
+- How do you specify which user to connect as when using SSH?
 - What are the correct permissions for a private key?
