@@ -11,7 +11,7 @@
     - name: install apt packages
       apt: name={{item}} state=latest update_cache=yes
       with_items: apt_packages
-      when: conditional == true
+      when: conditional
 
     - include: other.yml
-      when: conditional == false
+      when: not conditional
