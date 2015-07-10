@@ -15,7 +15,7 @@
       copy: src=../app.js dest=/mnt
 
     - name: ensure upstart script for app is in place
-      copy: src=../app.conf dest=/etc/init
+      copy: src=../app.conf dest=/etc/init.d
 
     - name: start app
       service: name=app state=started
