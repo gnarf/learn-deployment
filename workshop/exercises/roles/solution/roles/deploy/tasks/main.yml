@@ -1,0 +1,8 @@
+- name: make sure code is on the box
+  copy: src=../../../../app.js dest=/mnt
+
+- name: restart services
+  service: name={{item}} state=restarted
+  with_items:
+    - nginx
+    - app

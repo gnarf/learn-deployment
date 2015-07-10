@@ -1,0 +1,3 @@
+- What are Ansible roles?
+- Why is it desirable to use them?
+- How to you make it possible to share roles between projects?

@@ -1,0 +1,15 @@
+-
+  hosts: all
+  sudo: true
+  vars:
+    apt_packages:
+      - git
+      - nodejs
+      - nginx
+    app_path: /mnt/app
+    fqdn: workshop.learndeployment.com
+    port: 8000
+  roles:
+    - base
+    - configure
+    - deploy

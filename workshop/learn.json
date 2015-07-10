@@ -20,7 +20,8 @@
     "services",
     "templates",
     "registering-variables",
-    "nginx"
+    "nginx",
+    "roles"
   ],
   "meta": {
     "colors": {

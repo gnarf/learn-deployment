@@ -1,0 +1,9 @@
+- name: find node path
+  command: which nodejs
+  register: node_path
+
+- name: ensure upstart script for app is in place
+  template: src=../app.conf dest=/etc/init
+
+- name: ensure nginx is configured for app
+  template: src=../learndeployment.conf dest=/etc/nginx/conf.d
