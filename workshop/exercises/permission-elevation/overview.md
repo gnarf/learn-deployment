@@ -1,7 +1,34 @@
-# WHAT IS PERMISSION ELEVATION AND WHY IS IT USED?
+# WHAT IS PERMISSION ELEVATION AND HOW/WHEN/WHY IS IT USED?
+It can be tempting to log in to your server as the administrator or root user.
+This is risky for several reasons, the main being that it can be quite easy to
+accidentally run a destructive command when you don't mean to. Likewise, if
+your session is ever compromised or rouge software is running on your machine,
+it will have a much broader reach into your infrastructure.
 
-It can be tempting to always logon to a host as the administrator or root user. However doing so means if your session were ever compromised you would completely lose control of your host. Likewise, you risk rouge software acting on your behalf or running commands which have a broader effect than intended. For these reasons it's a best practice to always create a standard user account for the administrator to use and force them to elevate themselves when acting as an administrator.
+For these reasons and more it's a best practice to always create a standard user
+account for each administrator to use and force them to "elevate" themselves
+when needed.
 
-In a Linux environment this is most commonly done with the `sudo` command. Prefixing a command with `sudo` causes it to be executed with adminirative privileges. Determining who is able to run `sudo` is accomplished with the `/etc/sudoers` file. This file determines who is able to act as an administrator and what is required to actually execute a sudo'd command (a password in most cases).
+## SUDO
+In a Linux environment permissions elevation is most commonly handled with the
+`sudo` command. Prefixing any command with `sudo` causes it to be executed with
+administrative privileges.
 
-Sometimes it's necessary for one user to assume the identity of another for an entire session and not just a single command. In these cases the command `su` is used. Invoking it with no arguments is the same as invoking it with `root`: `su - root`. An administrator is able to `su - USERNAME` and assume the identity of that user on the localhost provided they are able to authenticate or elevate permissions to that user. The `exit` command can be used to end the session and return to the standard user prompt. There are many options for the `su` command but for the majority of everyday tasks `sudo` will likely be sufficient and preferred.
+## SUDOERS
+Determining who is able to run `sudo` is generally accomplished by editing the
+`/etc/sudoers` file. This configuration determines who is able to act as an
+administrator, and also specifies what is required to do so (a password in most
+cases).
+
+## SU
+Sometimes, it's necessary for one user to assume the identity of another for
+an extended period. In these cases, the command `su` is used. Invoking it with
+no arguments is the same as invoking it with `root`: `su - root`.
+
+An administrator is able to `su - USERNAME` and assume the identity of that user
+on the machine provided they are able to authenticate or elevate permissions to
+that user. The `exit` command can be used to end the session and return to the
+previous user's prompt.
+
+There are *many* usages for the `su` command but for the majority of everyday
+tasks `sudo` will likely be sufficient and preferred.
