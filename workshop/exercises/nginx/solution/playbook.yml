@@ -25,7 +25,7 @@
       template: src=../app.conf dest=/etc/init
 
     - name: ensure nginx is configured for app
-      template: src=../learn-deployment.conf dest=/etc/nginx/conf.d
+      template: src=../learndeployment.conf dest=/etc/nginx/conf.d
 
     - name: restart services
       service: name={{item}} state=restarted
