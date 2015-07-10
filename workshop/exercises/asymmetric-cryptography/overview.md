@@ -1,4 +1,4 @@
-# Asymmetric Cryptography
+# ASYMMETRIC CRYPTOGRAPHY
 
 In order for communication between two parties to be secure, it is necessary
 that they trust each other. One foundation for building this trust is asymmetric
@@ -45,7 +45,7 @@ The assumption in asymmetric cryptography is that possession of the private key
 is proof of identity. Keep your private key secure, or anyone can pretend to be
 you!
 
-## Exercise
+## EXERCISE
 
 Before moving to the next exercise, be sure you have a keypair. If you list the
 contents of `~/.ssh` you should see at least two files: `id_rsa` (the private

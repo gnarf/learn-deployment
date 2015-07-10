@@ -37,7 +37,7 @@ On most Linux distributions the `authorized_keys` file and `~/.ssh` directory
 might not exist by default and will need to be created by the user. The `.ssh`
 directory should have `0700` permissions and the `authorized_keys` file `0600`.
 
-## Exercise
+## EXERCISE
 
 In the previous exercise, the instructor of this workshop created an account
 for your username at `workshop.learn-deployment.com`. Try editing or removing

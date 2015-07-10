@@ -59,7 +59,7 @@ can be used. Alternatively, `~/.ssh/known_hosts` can be manually edited and the
 outdated line removed. If the `known_hosts` file is removed completely it will
 be recreated and any established trust relationships will be lost.
 
-## Exercise
+## EXERCISE
 
 In this exercise, the instructor of the workshop will swap the server that is
 running at `workshop.learn-deployment.com` to illustrate what a `known_hosts`
