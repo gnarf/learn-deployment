@@ -1,3 +1,2 @@
-BASE=`dirname $0`
 chmod 400 privatekey.pem
 ssh -i privatekey.pem ubuntu@workshop.learndeployment.com
