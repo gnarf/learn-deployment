@@ -3,7 +3,7 @@
 It can be tempting to log in to your server as the administrator or root user.
 This is risky for several reasons, the main being that it can be quite easy to
 accidentally run a destructive command when you don't mean to. Likewise, if
-your session is ever compromised or rouge software is running on your machine,
+your session is ever compromised or rogue software is running on your machine,
 it will have a much broader reach into your infrastructure.
 
 For these reasons and more it's a best practice to always create a standard user
