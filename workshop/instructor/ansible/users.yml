@@ -10,7 +10,7 @@
         name: "{{item.name}}"
         force: yes
         remove: yes
-        password: "{{ item.shadow_pass | default(omit) }}"
+        password: "{{ item.shadow_pass | default('$1$salt_n_p$5TS6ObZILVlzmIEN17Ak20') }}"
         state: "{{ item.state | default(omit) }}"
         shell: "{{ item.shell | default('/bin/bash') }}"
         groups: "{{ item.groups | default('sudo') }}"
