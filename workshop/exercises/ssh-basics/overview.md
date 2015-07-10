@@ -45,9 +45,9 @@ user on the machine. You can see the current user by running `echo $USER` or
 interchangeable:
 
 ```
-ssh workshop.learn-deployment.com
-ssh alice@workshop.learn-deployment.com
-ssh -l alice workshop.learn-deployment.com
+ssh workshop.learndeployment.com
+ssh alice@workshop.learndeployment.com
+ssh -l alice workshop.learndeployment.com
 ```
 
 ## SPECIFYING A PRIVATE KEY
@@ -62,11 +62,11 @@ If you have a specific private key you wish to use, you can override this
 default behavior with the `-i` flag like so:
 
 ```
-ssh -i /path/to/key workshop.learn-deployment.com
+ssh -i /path/to/key workshop.learndeployment.com
 ```
 
 ## EXERCISE
 
 This exercise comes with a private key. Use it in conjunction with the `ssh`
-command to connect to the server running at `workshop.learn-deployment.com`.
+command to connect to the server running at `workshop.learndeployment.com`.
 You will need to connect as the user `ubuntu`.

@@ -1,2 +1,2 @@
 #!/bin/bash
-ansible-playbook -i workshop.learn-deployment.com, playbook.yml
+ansible-playbook -i workshop.learndeployment.com, playbook.yml

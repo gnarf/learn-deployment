@@ -62,6 +62,6 @@ be recreated and any established trust relationships will be lost.
 ## EXERCISE
 
 In this exercise, the instructor of the workshop will swap the server that is
-running at `workshop.learn-deployment.com` to illustrate what a `known_hosts`
+running at `workshop.learndeployment.com` to illustrate what a `known_hosts`
 conflict looks like. Resolve this conflict so you can connect to the server
 again.
