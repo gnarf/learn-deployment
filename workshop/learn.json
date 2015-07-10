@@ -3,6 +3,7 @@
   "description": "Learn Deployment With Ansible",
   "path": "exercises",
   "exercises": [
+    "asymmetric-cryptography",
     "ssh-basics",
     "authorized-keys",
     "known-hosts",
