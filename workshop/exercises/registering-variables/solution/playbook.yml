@@ -8,22 +8,10 @@
       - nginx
     app_path: /mnt/app
   tasks:
-    - name: install apt packages
-      apt: name={{item}} state=latest update_cache=yes
-      with_items: apt_packages
+    - shell: cat /etc/hosts
+      register: hosts_contents
 
-    - name: make sure code is on the box
-      copy: src=../app.js dest=/mnt
+    - debug: var=hosts_contents
 
-    - name: find node path
-      command: which nodejs
-      register: node_path
-
-    - name: ensure upstart script for app is in place
-      template: src=../app.conf dest=/etc/init
-
-    - name: start services
-      service: name={{item}} state=restarted
-      with_items:
-        - nginx
-        - app
+    - shell: echo "/etc/hosts contains an entry for google"
+      when: hosts_contents.stdout.find('google') != -1
