@@ -1,3 +1,3 @@
 echo $SSH_AUTH_SOCK
-ssh workshop.learn-deployment.com 'echo $SSH_AUTH_SOCK'
-ssh -A workshop.learn-deployment.com 'echo $SSH_AUTH_SOCK'
+ssh workshop.learndeployment.com 'echo $SSH_AUTH_SOCK'
+ssh -A workshop.learndeployment.com 'echo $SSH_AUTH_SOCK'

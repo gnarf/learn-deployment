@@ -44,10 +44,10 @@ connection (or it runs out of keys).
 ## EXERCISE
 
 Confirm your agent is running by checking the value of $SSH_AUTH_SOCK. Then,
-confirm your agent is forwarding by ssh-ing to `workshop.learn-deployment.com`
+confirm your agent is forwarding by ssh-ing to `workshop.learndeployment.com`
 and checking $SSH_AUTH_SOCK again. Finally, confirm your agent is configured
 with your private key by trying to ssh to git@github.com both locally and
 remotely.
 
 As extra credit, edit `~/.ssh/config` to make agent forwarding the default
-behavior for `workshop.learn-deployment.com`.
+behavior for `workshop.learndeployment.com`.

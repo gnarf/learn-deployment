@@ -1,3 +1,3 @@
 #!/bin/bash
-ssh-keygen -R workshop.learn-deployment.com
-ssh workshop.learn-deployment.com
+ssh-keygen -R workshop.learndeployment.com
+ssh workshop.learndeployment.com

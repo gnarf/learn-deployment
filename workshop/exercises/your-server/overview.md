@@ -4,7 +4,7 @@ The instructor of this workshop should have provided you with an un-configured
 server to connect to. Copy your public key to the ubuntu user's home directory
 with this command:
 
-`scp -i privatekey.pem ~/.ssh/id_rsa.pub ubuntu@<user>.learn-deployment.com:~/`
+`scp -i privatekey.pem ~/.ssh/id_rsa.pub ubuntu@<user>.learndeployment.com:~/`
 
 Next, connect to the machine as the ubuntu user and create your own account:
 

@@ -37,7 +37,7 @@ outside world like so:
 ```
 server {
   listen 80;
-  server_name workshop.learn-deployment.com;
+  server_name workshop.learndeployment.com;
   location / {
     proxy_pass http://app;
     include proxy_params;
@@ -70,4 +70,4 @@ During the previous exercises, we created a playbook to install a NodeJS app and
 associated service. For our final step, configure NGINX to route traffic to it.
 You'll know you've succeeded when you can visit your application here:
 
-http://username.learn-deployment.com
+http://username.learndeployment.com

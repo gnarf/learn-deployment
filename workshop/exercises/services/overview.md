@@ -64,5 +64,5 @@ Using Ansible, copy both the application and the init script to the remote
 server and start the service. The application should be located at /mnt/app.js.
 
 The modules you'll need for your tasks are `copy` and `service`. You'll know you
-have succeeded when you can visit http://username.learn-deployment.com:8000 and
+have succeeded when you can visit http://username.learndeployment.com:8000 and
 see the hit counter!

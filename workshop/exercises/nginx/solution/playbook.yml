@@ -7,7 +7,7 @@
       - nodejs
       - nginx
     app_path: /mnt/app
-    fqdn: workshop.learn-deployment.com
+    fqdn: workshop.learndeployment.com
     port: 8000
   tasks:
     - name: install apt packages

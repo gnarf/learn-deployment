@@ -9,7 +9,7 @@ to create one:
 https://help.github.com/articles/generating-ssh-keys/
 
 The instructor should prepare the ansible configuration in this folder to grant
-all attendees access to `workshop.learn-deployment.com`. This should **NOT** be
+all attendees access to `workshop.learndeployment.com`. This should **NOT** be
 run before the first exercise begins.
 
 The workshop opens by having everyone `npm install -g tkellen/learn-deployment`.
@@ -31,7 +31,7 @@ The instructor will explain asymmetric cryptography.
 ## ssh-basics
 
 The exercise folder contains a private key which can be used to connect to
-an EC2 instance accessible at `workshop.learn-deployment.com` with the
+an EC2 instance accessible at `workshop.learndeployment.com` with the
 username `ubuntu`. Notably, the key has the wrong permissions. Attendees must
 first correct this before they can connect (chmod 400, owner read only).
 
@@ -39,13 +39,19 @@ Once all attendees have successfully connected, everyone should log off and
 try to connect as themselves. This will fail.
 
 Then, the instructor will tell the attendees to wait a moment as they run a
-playbook to give everyone access. A few seconds later, everyone in the room has
+playbook to give everyone access. 
+
+```
+ansible-playbook --private-key=../../exercises/ssh-basics/privatekey.pem -u ubuntu -i inventory/studentservers users.yml
+```
+
+A few seconds later, everyone in the room has
 access to the machine. Cool! Once everyone is logged in, move to the next
 exercise.
 
 ## authorized-keys
 
-Attendees should be connected to `workshop.learn-deployment.com` as their own
+Attendees should be connected to `workshop.learndeployment.com` as their own
 user.
 
 Because each attendee provided their public key before the workshop, the
@@ -57,11 +63,11 @@ run their setup playbook again, renewing access for everyone.
 
 ## known-hosts
 
-Everyone should be able to SSH to `workshop.learn-deployment.com` as their own
+Everyone should be able to SSH to `workshop.learndeployment.com` as their own
 user before this exercise begins.
 
 To illustrate what a MiTM attack might look like, the instructor will switch EC2
-instances for `workshop.learn-deployment.com`. Attendees will then SSH to the
+instances for `workshop.learndeployment.com`. Attendees will then SSH to the
 server. This will trigger a warning.
 
 The instructor will then explain how to fix this problem using `ssh-keygen`,
@@ -83,7 +89,7 @@ We can check if ssh-agent is running by echoing the environment variable
 $SSH_AUTH_SOCK.
 
 Attendees can then check to see if forwarding works by ssh-ing to
-`workshop.learn-deployment.com` and running `ssh git@github.com`. If agent
+`workshop.learndeployment.com` and running `ssh git@github.com`. If agent
 forwarding is functioning they should see "Hi <username>! ....".
 
 The `-A` flag must be specified with SSH to enable this. We should also cover
@@ -97,7 +103,7 @@ how to manage sudoers.
 
 ## your-server
 
-Attendees will each be given a `username.learn-deployment.com` domain that
+Attendees will each be given a `username.learndeployment.com` domain that
 points to a server of their own. They will then be instructed to connect using
 the provided private key, and to create a user for themselves that supports
 public key auth.

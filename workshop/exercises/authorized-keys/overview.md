@@ -40,5 +40,5 @@ directory should have `0700` permissions and the `authorized_keys` file `0600`.
 ## EXERCISE
 
 In the previous exercise, the instructor of this workshop created an account
-for your username at `workshop.learn-deployment.com`. Try editing or removing
+for your username at `workshop.learndeployment.com`. Try editing or removing
 the `authorized_keys` file for that user. Then, log off and try to log on again.
