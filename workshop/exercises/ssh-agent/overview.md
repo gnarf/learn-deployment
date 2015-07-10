@@ -41,7 +41,7 @@ a remote machine (e.g. `ssh -i /path/to/key`), as it will automatically loop
 through all of your private keys until it's able to establish a successful
 connection (or it runs out of keys).
 
-## Exercise
+## EXERCISE
 
 Confirm your agent is running by checking the value of $SSH_AUTH_SOCK. Then,
 confirm your agent is forwarding by ssh-ing to `workshop.learn-deployment.com`

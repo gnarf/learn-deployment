@@ -14,11 +14,8 @@
     - name: make sure code is on the box
       copy: src=../app.js dest=/mnt
 
-    - name: install service
+    - name: ensure upstart script for app is in place
       copy: src=../app.conf dest=/etc/init
 
-    - name: start services
-      service: name={{item}} state=restarted
-      with_items:
-        - nginx
-        - app
+    - name: start app
+      service: name=app state=started
