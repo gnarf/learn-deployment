@@ -11,9 +11,13 @@ module.exports = function (exercisesDir, exercises) {
     const src = path.join(exercisesDir, exercise);
     const dest = path.join(process.cwd(), exercise);
     const overviewFile = path.join(src, 'overview.md');
+    const objectivesFile = path.join(src, 'objectives.md');
     const overview = fs.readFileSync(overviewFile, { encoding: 'utf-8' });
+    const objectives = fs.readFileSync(objectivesFile, { encoding: 'utf-8' });
     console.log();
     console.log(render(overview));
+    console.log(render('## LEARNING OBJECTIVES'));
+    console.log(render(objectives));
     var existing;
     try {
       existing = fs.lstatSync(dest).isDirectory();
