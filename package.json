@@ -1,10 +1,12 @@
 {
   "name": "learn-deployment",
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "http://learn-deployment.com",
+  "repository": "bocoup/learn-deployment",
+  "author": "Tyler Kellen & Matt Surabian <hello@bocoup.com> (http://bocoup.com/)",
   "bin": {
-    "deploy": "bin/deploy.js"
-  },
-  "scripts": {
-    "start": "node bin/deploy"
+    "learn-deployment": "bin/workshop.js"
   },
   "dependencies": {
     "marked": "^0.3.3",
@@ -12,11 +14,5 @@
     "ramda": "^0.14.0",
     "terminal-menu": "^2.1.1",
     "wrench": "^1.5.8"
-  },
-  "devDependencies": {
-    "chai": "^3.0.0",
-    "jscs": "^1.13.1",
-    "jshint": "^2.8.0",
-    "mocha": "^2.2.5"
   }
 }

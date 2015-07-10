@@ -49,7 +49,6 @@ Learn.prototype.menu = function () {
     exercises
   );
   menu.write(bar + '\n');
-  menu.add('HELP');
   menu.add('EXIT');
 
   process.stdin.setRawMode(true);
