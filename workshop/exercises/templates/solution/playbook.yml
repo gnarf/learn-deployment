@@ -17,7 +17,7 @@
       copy: src=../app.js dest=/mnt
 
     - name: install service
-      template: src=app.conf dest=/etc/init
+      template: src=app.conf dest=/etc/init.d
 
     - name: start services
       service: name={{item}} state=restarted
