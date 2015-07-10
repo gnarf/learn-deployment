@@ -2,4 +2,5 @@
 - Where does nginx store per-site configuration files?
 - What is an "upstream" in an nginx configuration?
 - How do you send traffic for web requests to a local service?
+- How do you tell services behind a proxy where the original request came from?
 - Why is it preferable to use nginx vs exposing express or rack etc directly?
