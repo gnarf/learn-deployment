@@ -8,7 +8,7 @@ with this command:
 
 Next, connect to the machine as the ubuntu user and create your own account:
 
-`sudo adduser --disable-password <username>`
+`sudo adduser --disabled-password <username>`
 
 Finally, using knowledge from previous exercises, configure an `authorized_keys`
 file for the new user using the public key you just copied. Don't forget to set
