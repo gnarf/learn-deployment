@@ -1,2 +1,2 @@
-- How do you loop over an array?
-- What other kinds of looping mechanisms does Ansible provide?
+- How do you loop over an array/list in Ansible?
+- What other looping constructs are possible?
