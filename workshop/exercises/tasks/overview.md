@@ -34,7 +34,7 @@ time to name your tasks so they are more easily understood, both for others
 and yourself in the future. This can be done like so:
 
 ```
-tasks
+tasks:
   - name: show the distribution
     debug: var=ansible_distribution
   - name: install git
@@ -52,6 +52,20 @@ complex.
 For example, imagine running a task to add a line to a configuration file. Even
 if you run that task twenty times, you only want the line added once (like most
 things, Ansible has a module for that, it's called `lineinfile`).
+
+## USING SUDO
+
+If you run a task that requires administrative privileges, you'll need to
+"elevate" it with the `sudo` keyword, e.g:
+
+```
+tasks:
+  - name: install git
+    apt: name=git state=latest update_cache=true
+    sudo: true
+```
+
+You can also elevate an entire playbook with `sudo: true` at the top level.
 
 ## EXERCISE
 

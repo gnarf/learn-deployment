@@ -3,3 +3,4 @@
 - How do you use an Ansible module in a task?
 - By default, how does ordering affect task execution in Ansible?
 - What is the name property for?
+- How do you elevate permissions for a single task? For an entire playbook?
