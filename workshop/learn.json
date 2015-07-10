@@ -9,7 +9,7 @@
     "known-hosts",
     "ssh-key-passphrases",
     "ssh-agent",
-    "permissions-elevation",
+    "permission-elevation",
     "your-server",
     "ansible",
     "playbooks",
